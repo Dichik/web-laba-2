@@ -1,5 +1,4 @@
 .inputField {
-    height: 30px;
     width: 400px;
     text-align: center;
     outline: none;
@@ -9,10 +8,32 @@
 }
 
 .nameInputField {
+    height: 30px;
     margin-top: 200px;
 }
 
 .emailInputField {
+    height: 30px;
+    margin-top: 20px;
+}
+
+.textField {
+    height: 200px;
+    margin-top: 20px;
+}
+/*
+   TODO text can goes to next line (no out of border)
+    and then there will be a scroll button if the message is huge
+ */
+.submitButton {
+    height: 45px;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.resetButton {
+    height: 45px;
+    width: 200px;
     margin-top: 20px;
 }
 
