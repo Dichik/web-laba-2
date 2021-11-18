@@ -11,7 +11,7 @@ function Spinner() {
                 color={"#00BFFF"}
                 height={100}
                 width={100}
-                timeout={10 * 3000} // 30 seconds
+                timeout={3000} // 30 seconds
             />
         </ContainerLoader>
     );

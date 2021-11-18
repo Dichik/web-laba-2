@@ -1,7 +1,9 @@
 import './App.css';
 // import sendEmail from './Mailer'
 import {useState} from "react";
-import Spinner from "./Speener";
+import Spinner from "./Spinner";
+import emailjs from 'emailjs-com'
+import{ init } from 'emailjs-com';
 
 function App() {
     const [name, setName] = useState("");
@@ -17,10 +19,10 @@ function App() {
         if(errorNumber === 1) {
             alert("There is an empty string...");
         } else {
-            alert("There is something wrong with your email");
+            alert("There is something wrong with your email...");
         }
     }
-
+    //FIXME rewrite to use form instead of all fields ???
     const notEmpty = (str) => {
         if(str === "") {
             showErrorMessage(str, 1);
@@ -43,11 +45,13 @@ function App() {
             if(notEmpty(name) && notEmpty(textMessage) && checkEmail()) {
                 setSendingEmail(true);
                 sendEmail(name, email, textMessage);
-                // setSendingEmail(false);
+                setSendingEmail(false);
                 resetData();
             } else setSubmitBlocked(false);
         }
     }
+
+    // TODO ліміт запитів до 1000
 
     const resetData = () => {
         setName("");
@@ -61,11 +65,21 @@ function App() {
         return (email === "" && name === "" && textMessage === "");
     }
 
-    const sendEmail = (name, email, textMessage) => {
-        // console.log(name)
+    const sendEmail = () => {
+        emailjs.init("user_AJGy3zMpNl2Rxs4CFFafD");
+        let form = {
+            name: name,
+            email: email,
+            textMessage: textMessage
+        }
+        emailjs.send('service_tauvzqc', 'template_26nh4ab', form)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
     }
 
-  //  TODO add database connection (Supabase, or another)
   return (
       <div>
           { !sendingEmail ?
@@ -117,7 +131,7 @@ function App() {
               <button className={"centerBlock resetButton"}
                       disabled={allFieldsEmpty()}
                       onClick={resetData}>
-                  Reset
+                  Clear
               </button>
           </div> : Spinner()
           }

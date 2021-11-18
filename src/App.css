@@ -1,9 +1,10 @@
+
 .inputField {
     width: 400px;
     text-align: center;
     outline: none;
 
-    font-family: "Ubuntu";
+    font-family: "Ubuntu", serif;
     font-size: 20px;
 
     border: 0.5px solid grey;
@@ -40,7 +41,7 @@
     border-radius: 20px;
     box-shadow: 5px 5px 10px grey;
 
-    font-family: "Ubuntu";
+    font-family: "Ubuntu", serif;
     font-size: 20px;
 }
 
@@ -56,13 +57,13 @@
     height: 45px;
     width: 200px;
     margin-top: 20px;
-
+    /*FIXME change all colors to var(...)*/
     background: rgba(0, 239, 252, 0.54);
     border: 1px solid #00effc;
     border-radius: 20px;
     box-shadow: 5px 5px 10px grey;
 
-    font-family: "Ubuntu";
+    font-family: "Ubuntu", serif;
     font-size: 20px;
 }
 
