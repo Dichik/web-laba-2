@@ -13,6 +13,16 @@ function App() {
 
     let regEmail = /^[a-zA-Z-0-9]+@[a-zA-Z-0-9]+\.[A-Za-z]+$/
 
+    const rateLimit = require("express-rate-limit")
+
+    const limiter = rateLimit({
+        windowsMs: 15 * 60 * 100,
+        max: 1,
+        message: "Too many requests..."
+    });
+
+
+
     const showErrorMessage = (str, errorNumber) => {
         if(errorNumber === 1) {
             alert("There is an empty string...");
@@ -95,8 +105,6 @@ function App() {
       <div>
           { !loading ?
           <div>
-              {/*TODO message about a successfully sent data*/}
-              {/*TODO add header*/}
               <header className={"headerClass"}>
                   <h1>Sending message</h1>
               </header>
@@ -151,5 +159,5 @@ function App() {
       </div>
   );
 }
-//TODO add css files
+
 export default App;
