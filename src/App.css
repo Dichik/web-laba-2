@@ -3,8 +3,13 @@
     text-align: center;
     outline: none;
 
-    font-family: "DejaVu Sans Mono";
+    font-family: "Ubuntu";
     font-size: 20px;
+
+    border: 0.5px solid grey;
+    border-bottom: 3px solid grey;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px grey;
 }
 
 .nameInputField {
@@ -29,12 +34,36 @@
     height: 45px;
     width: 200px;
     margin-top: 20px;
+
+    background: rgba(0, 239, 252, 0.54);
+    border: 1px solid #00effc;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px grey;
+
+    font-family: "Ubuntu";
+    font-size: 20px;
+}
+
+.submitButton:hover {
+    background: #00effc;
+}
+
+.resetButton:hover {
+    background: #00effc;
 }
 
 .resetButton {
     height: 45px;
     width: 200px;
     margin-top: 20px;
+
+    background: rgba(0, 239, 252, 0.54);
+    border: 1px solid #00effc;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px grey;
+
+    font-family: "Ubuntu";
+    font-size: 20px;
 }
 
 /*TODO add borders and background*/
