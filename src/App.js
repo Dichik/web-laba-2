@@ -9,11 +9,19 @@ function App() {
   //  TODO add database connection (Supabase, or another)
   return (
     <div>
+        {/*TODO add header*/}
         <input type={"name"} placeholder={"Enter your name"}
-               className={"inputField nameInputField centerBlock"} />
+               className={"inputField nameInputField centerBlock"}
+               onChange={event => setEmail(email + event)}
+        />
         <input type={"email"} placeholder={"Enter your email"}
                className={"inputField emailInputField centerBlock"} />
-        <input type={"password"} placeholder={"Enter your password"} />
+        <input type={"text"} placeholder={"Enter your message here"}
+               className={"inputField textField centerBlock"} />
+        {/*TODO add speener*/}
+        <button className={"centerBlock submitButton"}>
+            Submit
+        </button>
         {/*FIXME remove password field*/}
     {/*    TODO add an ability to enter a text (message) - no null*/}
     </div>
