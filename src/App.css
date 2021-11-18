@@ -1,4 +1,8 @@
 
+.headerClass {
+    text-align: center;
+}
+
 .inputField {
     width: 400px;
     text-align: center;

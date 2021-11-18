@@ -1,9 +1,7 @@
 import './App.css';
-// import sendEmail from './Mailer'
 import {useState} from "react";
 import Spinner from "./Spinner";
 import emailjs from 'emailjs-com'
-import{ init } from 'emailjs-com';
 
 function App() {
     const [name, setName] = useState("");
@@ -11,18 +9,20 @@ function App() {
     const [textMessage, setTextMessage] = useState("");
     const [submitBlocked, setSubmitBlocked] = useState(false);
     const [activeField, setActiveField] = useState(0);
-    const [sendingEmail, setSendingEmail] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     let regEmail = /^[a-zA-Z-0-9]+@[a-zA-Z-0-9]+\.[A-Za-z]+$/
 
     const showErrorMessage = (str, errorNumber) => {
         if(errorNumber === 1) {
             alert("There is an empty string...");
-        } else {
+        } else if(errorNumber === 2) {
             alert("There is something wrong with your email...");
+        } else if(errorNumber === 3) {
+            alert(str)
         }
     }
-    //FIXME rewrite to use form instead of all fields ???
+
     const notEmpty = (str) => {
         if(str === "") {
             showErrorMessage(str, 1);
@@ -39,33 +39,42 @@ function App() {
         return true;
     }
 
-    const submitData = () => {
-        if(!submitBlocked) {
+    const wait = async () => {
+        setTimeout(() => console.log("Loading..."), 5000)
+    }
+
+    const submitData = async () => {
+        if (!submitBlocked) {
             setSubmitBlocked(true);
-            if(notEmpty(name) && notEmpty(textMessage) && checkEmail()) {
-                setSendingEmail(true);
-                sendEmail(name, email, textMessage);
-                setSendingEmail(false);
-                resetData();
+            if (notEmpty(name) && notEmpty(textMessage) && checkEmail()) {
+                setLoading(true)
+                await wait()
+                await sendEmail(name, email, textMessage)
             } else setSubmitBlocked(false);
         }
     }
 
     // TODO ліміт запитів до 1000
 
-    const resetData = () => {
+    const resetData = async () => {
         setName("");
         setEmail("");
         setTextMessage("");
         setSubmitBlocked(false);
         setActiveField(0);
+        setLoading(false)
     }
 
     const allFieldsEmpty = () => {
         return (email === "" && name === "" && textMessage === "");
     }
 
-    const sendEmail = () => {
+    const showMessageAboutSuccess = () => {
+        alert("Your message was successfully sent")
+        resetData()
+    }
+
+    const sendEmail = async () => {
         emailjs.init("user_AJGy3zMpNl2Rxs4CFFafD");
         let form = {
             name: name,
@@ -75,18 +84,22 @@ function App() {
         emailjs.send('service_tauvzqc', 'template_26nh4ab', form)
             .then((result) => {
                 console.log(result.text);
+                showMessageAboutSuccess();
             }, (error) => {
                 console.log(error.text);
+                showErrorMessage("Error, your message wasn't sent", 3)
             });
     }
 
   return (
       <div>
-          { !sendingEmail ?
+          { !loading ?
           <div>
               {/*TODO message about a successfully sent data*/}
-              {/*TODO send email with a text*/}
               {/*TODO add header*/}
+              <header className={"headerClass"}>
+                  <h1>Sending message</h1>
+              </header>
               <input type={"name"} placeholder={"Enter your name"}
                      className={"inputField nameInputField centerBlock"}
                      value={name}
