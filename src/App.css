@@ -1,0 +1,25 @@
+.inputField {
+    height: 30px;
+    width: 400px;
+    text-align: center;
+    outline: none;
+
+    font-family: "DejaVu Sans Mono";
+    font-size: 20px;
+}
+
+.nameInputField {
+    margin-top: 200px;
+}
+
+.emailInputField {
+    margin-top: 20px;
+}
+
+/*TODO add borders and background*/
+
+.centerBlock {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
