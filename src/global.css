@@ -1,0 +1,78 @@
+.headerClass {
+  text-align: center;
+}
+
+/* FIXME var instead of colors */
+
+.inputField {
+  width: 400px;
+  text-align: center;
+  outline: none;
+  font-family: "Ubuntu", serif;
+  font-size: 20px;
+  border: 0.5px solid grey;
+  border-bottom: 3px solid grey;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px grey;
+}
+
+.nameInputField {
+  height: 30px;
+  margin-top: 200px;
+}
+
+.emailInputField {
+  height: 30px;
+  margin-top: 20px;
+}
+
+.textField {
+  height: 200px;
+  margin-top: 20px;
+}
+
+/*
+   TODO text can goes to next line (no out of border)
+    and then there will be a scroll button if the message is huge
+ */
+.submitButton {
+  height: 45px;
+  width: 200px;
+  margin-top: 20px;
+  background: rgb(0 239 252 / 54%);
+  border: 1px solid #00effc;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px grey;
+  font-family: "Ubuntu", serif;
+  font-size: 20px;
+}
+
+.submitButton:hover {
+  background: #00effc;
+}
+
+.resetButton:hover {
+  background: #00effc;
+}
+
+.resetButton {
+  height: 45px;
+  width: 200px;
+  margin-top: 20px;
+
+  /* FIXME change all colors to var(...) */
+  background: rgb(0 239 252 / 54%);
+  border: 1px solid #00effc;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px grey;
+  font-family: "Ubuntu", serif;
+  font-size: 20px;
+}
+
+/* TODO add borders and background */
+
+.centerBlock {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
