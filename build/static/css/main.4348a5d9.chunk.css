@@ -1,2 +1,79 @@
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}code{font-family:source-code-pro,Menlo,Monaco,Consolas,"Courier New",monospace}.headerClass,.inputField{text-align:center}.inputField{width:400px;outline:none;font-family:"Ubuntu",serif;font-size:20px;border:solid grey;border-width:.5px .5px 3px;border-radius:15px;box-shadow:5px 5px 10px grey}.nameInputField{height:30px;margin-top:200px}.emailInputField{height:30px;margin-top:20px}.textField{height:200px;margin-top:20px}.submitButton{height:45px;width:200px;margin-top:20px;background:rgba(0,239,252,.54);border:1px solid #00effc;border-radius:20px;box-shadow:5px 5px 10px grey;font-family:"Ubuntu",serif;font-size:20px}.resetButton:hover,.submitButton:hover{background:#00effc}.resetButton{height:45px;width:200px;margin-top:20px;background:rgba(0,239,252,.54);border:1px solid #00effc;border-radius:20px;box-shadow:5px 5px 10px grey;font-family:"Ubuntu",serif;font-size:20px}.centerBlock{display:block;margin-right:auto;margin-left:auto}
-/*# sourceMappingURL=main.4348a5d9.chunk.css.map */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.headerClass,
+.inputField {
+  text-align: center;
+}
+
+.inputField {
+  width: 400px;
+  outline: none;
+  font-family: "Ubuntu", serif;
+  font-size: 20px;
+  border: solid grey;
+  border-width: 0.5px 0.5px 3px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px grey;
+}
+
+.nameInputField {
+  height: 30px;
+  margin-top: 200px;
+}
+
+.emailInputField {
+  height: 30px;
+  margin-top: 20px;
+}
+
+.textField {
+  height: 200px;
+  margin-top: 20px;
+}
+
+.submitButton {
+  height: 45px;
+  width: 200px;
+  margin-top: 20px;
+  background: rgb(0 239 252 / 54%);
+  border: 1px solid #00effc;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px grey;
+  font-family: "Ubuntu", serif;
+  font-size: 20px;
+}
+
+.resetButton:hover,
+.submitButton:hover {
+  background: #00effc;
+}
+
+.resetButton {
+  height: 45px;
+  width: 200px;
+  margin-top: 20px;
+  background: rgb(0 239 252 / 54%);
+  border: 1px solid #00effc;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px grey;
+  font-family: "Ubuntu", serif;
+  font-size: 20px;
+}
+
+.centerBlock {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
