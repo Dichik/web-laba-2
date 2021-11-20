@@ -1,6 +1,6 @@
-import './App.css'
+import './global.css'
 import Loader from 'react-loader-spinner'
-import './App.css'
+import './global.css'
 import styled from 'styled-components';
 
 function Spinner() {
