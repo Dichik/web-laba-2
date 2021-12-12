@@ -108,7 +108,6 @@ function App() {
             style={{
               borderBottom: activeField === 1 ? "3px solid #10fc2a" : null,
             }}
-            // TODO light-green color if a field is filled
           />
           <input
             type={"email"}
