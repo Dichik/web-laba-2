@@ -2485,6 +2485,11 @@ anymatch@^3.0.3, anymatch@~3.1.1:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
+app-root-path@^2.1.0, app-root-path@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/app-root-path/-/app-root-path-2.2.1.tgz#d0df4a682ee408273583d43f6f79e9892624bc9a"
+  integrity sha512-91IFKeKk7FjfmezPKkwtaRvSpnUc4gDwPAjA1YZ9Gn0q0PPeW+vbeUsZuyDwjI7+QTHhcLen2v25fi/AmhvbJA==
+
 aproba@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/aproba/-/aproba-1.2.0.tgz#6802e6264efd18c790a1b0d517f0f2627bf2c94a"
@@ -3010,6 +3015,11 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
+
+bottleneck@^2.19.5:
+  version "2.19.5"
+  resolved "https://registry.yarnpkg.com/bottleneck/-/bottleneck-2.19.5.tgz#5df0b90f59fd47656ebe63c78a98419205cadd91"
+  integrity sha512-VHiNCbI1lKdl44tGrhNfU3lup0Tj/ZBMJB5/2ZbNXRCPuRCO7ed2mgcK4r17y+KB2EfuYuRaVlwNbAeaWGSpbw==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -4513,10 +4523,36 @@ ecc-jsbn@~0.1.1:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
 
+ee-argv@0.1.x:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/ee-argv/-/ee-argv-0.1.4.tgz#77f459daf980f11d2c6f8e28a21abb88020168ab"
+  integrity sha1-d/RZ2vmA8R0sb44oohq7iAIBaKs=
+
+ee-class@1.x, ee-class@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/ee-class/-/ee-class-1.4.0.tgz#2903f622ee1fe40cd8ba989d7ea239a31bd5e255"
+  integrity sha1-KQP2Iu4f5AzYupidfqI5oxvV4lU=
+
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
+
+ee-log@^0.3.11:
+  version "0.3.11"
+  resolved "https://registry.yarnpkg.com/ee-log/-/ee-log-0.3.11.tgz#7b9dee47d3d7fc99a94cdb19ac9d99ff8f66a368"
+  integrity sha1-e53uR9PX/JmpTNsZrJ2Z/49mo2g=
+  dependencies:
+    ee-argv "0.1.x"
+    ee-class "1.x"
+    ee-types "2.x"
+
+ee-types@2.x, ee-types@^2.2.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/ee-types/-/ee-types-2.2.1.tgz#1be9b6704ffa200cb0003ece72dca8037c1dd1de"
+  integrity sha512-ZgShE8RXsE+DFAddCmduKwUwoNLZd7Ik6yv6LFEUDfz/6k2s6rTvABQS8dO2EibJpYFWREOx/ealtwuTUXeeYg==
+  dependencies:
+    ee-class "^1.4.0"
 
 ejs@^2.6.1:
   version "2.7.4"
@@ -7306,6 +7342,14 @@ last-call-webpack-plugin@^3.0.0:
     lodash "^4.17.5"
     webpack-sources "^1.1.0"
 
+leaky-bucket@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/leaky-bucket/-/leaky-bucket-3.0.4.tgz#ff9d21302c9acf906cfdad0704332d8ada174191"
+  integrity sha512-yGCO4IDopOKouOSs21WF6OyQ6pbe+wqV4wT5CiW4bQK1UZaypNfCEE3BJl/hrXJ5yqnkuB0kynUgDHAZHYi27A==
+  dependencies:
+    logd "^2.3.0"
+    logd-console-transport "^1.1.0"
+
 leven@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/leven/-/leven-3.1.0.tgz#77891de834064cccba82ae7842bb6b14a13ed7f2"
@@ -7489,6 +7533,33 @@ log-update@^4.0.0:
     cli-cursor "^3.1.0"
     slice-ansi "^4.0.0"
     wrap-ansi "^6.2.0"
+
+logd-console-output@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/logd-console-output/-/logd-console-output-1.3.0.tgz#a49eb7a2ca25ce3b3e726b6e49d6639304241bae"
+  integrity sha512-Aau5xxpDXWBRIwl6zgConqmyNRBFq8VoQbzpQJjp9QVfrEtMgWUMbP2CUF9lCmMg0d2TQ79tEJA83+uQY36WAA==
+  dependencies:
+    app-root-path "^2.1.0"
+    chalk "^2.4.1"
+    ee-types "^2.2.0"
+    glob "^7.1.2"
+
+logd-console-transport@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/logd-console-transport/-/logd-console-transport-1.1.0.tgz#bb019201b9f01073faa7f3b282da566cca49c5c7"
+  integrity sha512-IFpLeFAU1u+lP5lznmzmivY20IwegWdmjtz+4OPrKxFfyuMPRtu9KxsBlsb11ALDZfm9f+RQEU26NNI4GeM2eQ==
+  dependencies:
+    logd "^2.2.1"
+    logd-console-output "^1.3.0"
+
+logd@^2.2.1, logd@^2.3.0, logd@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/logd/-/logd-2.3.1.tgz#065441206228bc1923213a8332a0622ba5034c35"
+  integrity sha512-7/B1fpycTXWS5KejZ8jHr+zmtmhprVQkZxMhk3vKJU16eVZ+Jj1a8D6bjpj3+fMNTN/x4aKt1I3Gw3TnhAt1lg==
+  dependencies:
+    app-root-path "^2.2.1"
+    ee-log "^0.3.11"
+    uuid "^3.3.3"
 
 loglevel@^1.6.8:
   version "1.7.1"
@@ -9998,7 +10069,17 @@ request-promise-native@^1.0.8:
     stealthy-require "^1.1.1"
     tough-cookie "^2.3.3"
 
-request@^2.88.2:
+request-rate-limiter@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/request-rate-limiter/-/request-rate-limiter-2.0.3.tgz#3166d81eeb6b243e7b047c6794cb9fd220f0f211"
+  integrity sha512-hTaheW3ApgEaUAJ1OTnw2glq3RgPoyt73XgrxfsiCcPk+TUTY6rrfYIHGSqZ0wrJbWnCI57Rv5xSgL1XMB8Ozw==
+  dependencies:
+    leaky-bucket "^3.0.4"
+    logd "^2.3.1"
+    logd-console-transport "^1.1.0"
+    request "^2.88.0"
+
+request@^2.88.0, request@^2.88.2:
   version "2.88.2"
   resolved "https://registry.yarnpkg.com/request/-/request-2.88.2.tgz#d73c918731cb5a87da047e207234146f664d12b3"
   integrity sha512-MsvtOrfG9ZcrOwAW+Qi+F6HbD0CWXEh9ou77uOb7FM2WPhwT7smM833PzanhJLsgXjN89Ir6V2PczXNnMpwKhw==
@@ -11778,7 +11859,7 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
-uuid@^3.3.2, uuid@^3.4.0:
+uuid@^3.3.2, uuid@^3.3.3, uuid@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
