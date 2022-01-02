@@ -38,16 +38,20 @@ function App() {
     return true;
   };
 
-  const wait = async () => {
-    setTimeout(() => console.log("Loading..."), 5000);
-  };
+  const delay = interval => new Promise(resolve => setTimeout(resolve, interval));
+
+  // const Bottleneck = require('bottleneck')
+  // const limiter  = new Bottleneck({
+  //   maxConcurrent: 5,
+  //   minTime: 1000
+  // })
 
   const submitData = async () => {
     if (!submitBlocked) {
       setSubmitBlocked(true);
       if (notEmpty(name) && notEmpty(textMessage) && checkEmail()) {
         setLoading(true);
-        await wait();
+        await delay(5000)
         await sendEmail(name, email, textMessage);
       } else setSubmitBlocked(false);
     }
