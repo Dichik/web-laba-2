@@ -53,7 +53,7 @@ function App() {
     }
   };
 
-  const resetData = async () => {
+  const resetData = () => {
     setName("");
     setEmail("");
     setTextMessage("");

@@ -1,46 +1,46 @@
 .inputField {
-    width: 400px;
-    text-align: center;
-    outline: none;
+  width: 400px;
+  text-align: center;
+  outline: none;
 
-    font-family: "DejaVu Sans Mono";
-    font-size: 20px;
+  font-family: "DejaVu Sans Mono", serif;
+  font-size: 20px;
 }
 
 .nameInputField {
-    height: 30px;
-    margin-top: 200px;
+  height: 30px;
+  margin-top: 200px;
 }
 
 .emailInputField {
-    height: 30px;
-    margin-top: 20px;
+  height: 30px;
+  margin-top: 20px;
 }
 
 .textField {
-    height: 200px;
-    margin-top: 20px;
+  height: 200px;
+  margin-top: 20px;
 }
 /*
    TODO text can goes to next line (no out of border)
     and then there will be a scroll button if the message is huge
  */
 .submitButton {
-    height: 45px;
-    width: 200px;
-    margin-top: 20px;
+  height: 45px;
+  width: 200px;
+  margin-top: 20px;
 }
 
 .resetButton {
-    height: 45px;
-    width: 200px;
-    margin-top: 20px;
+  height: 45px;
+  width: 200px;
+  margin-top: 20px;
 }
 
 /*TODO add borders and background*/
 
 .centerBlock {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
