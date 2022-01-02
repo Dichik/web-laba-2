@@ -38,7 +38,8 @@ function App() {
     return true;
   };
 
-  const delay = interval => new Promise(resolve => setTimeout(resolve, interval));
+  const delay = (interval) =>
+    new Promise((resolve) => setTimeout(resolve, interval));
 
   // const Bottleneck = require('bottleneck')
   // const limiter  = new Bottleneck({
@@ -51,7 +52,7 @@ function App() {
       setSubmitBlocked(true);
       if (notEmpty(name) && notEmpty(textMessage) && checkEmail()) {
         setLoading(true);
-        await delay(5000)
+        await delay(5000);
         await sendEmail(name, email, textMessage);
       } else setSubmitBlocked(false);
     }
