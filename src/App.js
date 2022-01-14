@@ -2,6 +2,8 @@ import { useState } from "react";
 import Spinner from "./Spinner";
 import emailjs from "emailjs-com";
 
+let result = "";
+
 function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -66,11 +68,6 @@ function App() {
     return email === "" && name === "" && textMessage === "";
   };
 
-  const showMessageAboutSuccess = () => {
-    alert("Your message was successfully sent");
-    resetData();
-  };
-
   const sendEmail = async () => {
     emailjs.init("user_AJGy3zMpNl2Rxs4CFFafD");
     let form = {
@@ -78,16 +75,13 @@ function App() {
       email: email,
       textMessage: textMessage,
     };
-    emailjs.send("service_tauvzqc", "template_26nh4ab", form).then(
-      (result) => {
-        console.log(result.text);
-        showMessageAboutSuccess();
-      },
-      (error) => {
-        console.log(error.text);
-        showErrorMessage("Error, your message wasn't sent", 3);
-      }
-    );
+    try {
+      await emailjs.send("service_tauvzqc", "template_26nh4ab", form);
+      result = "Email sent successfully!";
+      console.log(result);
+    } catch (e) {
+      result = "Error with sending email...";
+    }
   };
 
   return (

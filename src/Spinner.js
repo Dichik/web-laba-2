@@ -4,6 +4,10 @@ import "./global.css";
 import styled from "styled-components";
 
 function Spinner() {
+  const reloadPage = () => {
+    window.location.reload();
+  };
+
   return (
     <ContainerLoader>
       <Loader
@@ -11,8 +15,12 @@ function Spinner() {
         color={"#00BFFF"}
         height={100}
         width={100}
-        timeout={3000} // 30 seconds
+        timeout={300} // 30 seconds
       />
+      <div>
+        <p>Success!</p>
+        <button onClick={reloadPage}>Ok!</button>
+      </div>
     </ContainerLoader>
   );
 }
